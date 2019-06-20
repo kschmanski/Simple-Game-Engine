@@ -16,14 +16,14 @@ Engine::Engine() {
 
 void Engine::start() {
 
+	printf("Starting our engines...");
+
 	Clock clock;
 
 	while (m_Window.isOpen()) {
 		Time dt = clock.restart();
-
 		float dtAsSeconds = dt.asSeconds();
-
-		input();
+		input(dtAsSeconds);
 		update(dtAsSeconds);
 		draw();
 	}

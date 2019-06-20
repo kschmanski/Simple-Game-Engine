@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Bob.h"
+#include "Engine.h"
 
 Bob::Bob() {
 
@@ -12,6 +13,7 @@ Bob::Bob() {
 	//set Bob's starting position
 	m_Position.x = 500;
 	m_Position.y = 800;
+
 }
 
 Sprite Bob::getSprite() {
@@ -34,6 +36,10 @@ void Bob::stopRight() {
 	m_RightPressed = false;
 }
 
+float Bob::getSpeed() {
+	return m_Speed;
+}
+
 void Bob::update(float elapsedTime) {
 
 	if (m_RightPressed) {
@@ -45,4 +51,7 @@ void Bob::update(float elapsedTime) {
 	}
 
 	m_Sprite.setPosition(m_Position);
+
+	printf("Bob is at position %d\n", m_Position.x);
+
 }

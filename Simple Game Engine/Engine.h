@@ -13,7 +13,7 @@ private:
 
 	Bob m_Bob;
 
-	void input();
+	void input(float dtAsSeconds);
 	void update(float dtAsSeconds);
 	void draw();
 

@@ -28,6 +28,8 @@ public:
 
 	Sprite getSprite(); //getter
 
+	float getSpeed();
+
 	void moveLeft(); 
 
 	void moveRight();
