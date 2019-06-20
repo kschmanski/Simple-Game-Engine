@@ -4,6 +4,8 @@
 int main() {
 	Engine engine;
 
+	srand((unsigned)time(0));
+
 	engine.start();
 
 	return 0;

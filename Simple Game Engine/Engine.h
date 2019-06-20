@@ -14,6 +14,8 @@ private:
 
 	Bob m_Bob;
 	Enemy m_Enemy;
+	Enemy m_Enemy2;
+	Enemy m_Enemy3;
 
 	void input(float dtAsSeconds);
 	void update(float dtAsSeconds);

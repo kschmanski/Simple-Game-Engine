@@ -16,6 +16,8 @@ void Engine::draw() {
 	}
 
 	m_Window.draw(m_Enemy.getSprite());
+	m_Window.draw(m_Enemy2.getSprite());
+	m_Window.draw(m_Enemy3.getSprite());
 
 	Text hud;
 	Font font;
