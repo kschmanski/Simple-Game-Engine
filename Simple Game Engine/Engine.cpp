@@ -12,11 +12,10 @@ Engine::Engine() {
 	m_BackgroundTexture.loadFromFile("background.jpg");
 
 	m_BackgroundSprite.setTexture(m_BackgroundTexture);
+
 }
 
 void Engine::start() {
-
-	printf("Starting our engines...");
 
 	Clock clock;
 
