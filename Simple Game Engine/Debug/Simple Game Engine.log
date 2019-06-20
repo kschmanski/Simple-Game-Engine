@@ -1,2 +1,6 @@
 ﻿  Bob.cpp
+c:\visual studio stuff\projects\simple game engine\simple game engine\bob.cpp(17): warning C4305: 'argument': truncation from 'double' to 'float'
+  Enemy.cpp
+c:\visual studio stuff\projects\simple game engine\simple game engine\enemy.cpp(12): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating Code...
   Simple Game Engine.vcxproj -> C:\Visual Studio Stuff\Projects\Simple Game Engine\Debug\Simple Game Engine.exe

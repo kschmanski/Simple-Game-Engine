@@ -15,6 +15,8 @@ void Engine::draw() {
 		m_Window.draw(m_Bob.getSprite());
 	}
 
+	m_Window.draw(m_Enemy.getSprite());
+
 	Text hud;
 	Font font;
 	font.loadFromFile("Chunkfive.otf");

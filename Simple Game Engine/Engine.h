@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Bob.h"
+#include "Enemy.h"
 
 using namespace sf;
 
@@ -12,6 +13,7 @@ private:
 	Texture m_BackgroundTexture;
 
 	Bob m_Bob;
+	Enemy m_Enemy;
 
 	void input(float dtAsSeconds);
 	void update(float dtAsSeconds);

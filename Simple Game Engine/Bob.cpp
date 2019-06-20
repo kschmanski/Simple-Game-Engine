@@ -14,9 +14,14 @@ Bob::Bob() {
 	m_MovingSprite.setTexture(m_Texture);
 	m_MovingSprite.setTextureRect(IntRect(0, 0, 160, 300)); //moving character
 
+	m_Sprite.setScale(0.6, 0.6);
+	m_MovingSprite.setScale(0.5, 0.5);
+
 	//set Bob's starting position
 	m_Position.x = 500;
 	m_Position.y = 800;
+
+	
 
 }
 
