@@ -1,0 +1,11 @@
+﻿  Bob.cpp
+  Draw.cpp
+  Engine.cpp
+c:\visual studio stuff\projects\simple game engine\simple game engine\engine.cpp(7): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+c:\visual studio stuff\projects\simple game engine\simple game engine\engine.cpp(8): warning C4244: '=': conversion from 'unsigned int' to 'float', possible loss of data
+c:\visual studio stuff\projects\simple game engine\simple game engine\engine.cpp(10): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+  Input.cpp
+  Main.cpp
+  Update.cpp
+  Generating Code...
+sfml-graphics-d.lib(sfml-graphics-d-2.dll) : fatal error LNK1112: module machine type 'x86' conflicts with target machine type 'x64'

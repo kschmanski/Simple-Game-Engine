@@ -5,10 +5,14 @@
 Bob::Bob() {
 
 	//how fast does Bob move?
-	m_Speed = 400;
+	m_Speed = 400; //pixels per second
 
-	m_Texture.loadFromFile("bob.png");
+	m_Texture.loadFromFile("newCharacter.png");
 	m_Sprite.setTexture(m_Texture);
+	m_Sprite.setTextureRect(IntRect(50, 1500, 130, 300)); //standing character
+
+	m_MovingSprite.setTexture(m_Texture);
+	m_MovingSprite.setTextureRect(IntRect(0, 0, 160, 300)); //moving character
 
 	//set Bob's starting position
 	m_Position.x = 500;
@@ -18,6 +22,14 @@ Bob::Bob() {
 
 Sprite Bob::getSprite() {
 	return m_Sprite;
+}
+
+Sprite Bob::getMovingSprite() {
+	return m_MovingSprite;
+}
+bool Bob::isMoving() {
+	return m_LeftPressed || m_RightPressed || m_UpPressed || m_DownPressed;
+
 }
 
 void Bob::moveLeft() {
@@ -72,5 +84,7 @@ void Bob::update(float elapsedTime) {
 
 
 	m_Sprite.setPosition(m_Position);
+
+	m_MovingSprite.setPosition(m_Position); //test - might delete this
 
 }

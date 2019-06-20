@@ -12,6 +12,8 @@ private:
 	//we'll need a sprite
 	Sprite m_Sprite;
 
+	Sprite m_MovingSprite; //a sprite for when we're moving
+
 	//and a texture
 	Texture m_Texture;
 
@@ -20,6 +22,7 @@ private:
 	bool m_RightPressed;
 	bool m_UpPressed;
 	bool m_DownPressed;
+	
 
 	//Bob's speed (pixels per second)
 	float m_Speed;
@@ -29,6 +32,7 @@ public:
 	Bob(); //default constructor
 
 	Sprite getSprite(); //getter
+	Sprite getMovingSprite(); //getter
 
 	void moveLeft(); 
 	void moveRight();
@@ -39,6 +43,8 @@ public:
 	void stopRight(); //stop moving right
 	void stopUp(); //stop moving up
 	void stopDown(); //stop moving down
+
+	bool isMoving(); //is our character moving?
 
 	void update(float elapsedTime);
 };

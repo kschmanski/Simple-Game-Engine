@@ -7,7 +7,13 @@ void Engine::draw() {
 	m_Window.clear(Color::White);
 
 	m_Window.draw(m_BackgroundSprite);
-	m_Window.draw(m_Bob.getSprite());
+
+	if (m_Bob.isMoving()) {
+		m_Window.draw(m_Bob.getMovingSprite());
+	}
+	else {
+		m_Window.draw(m_Bob.getSprite());
+	}
 
 	Text hud;
 	Font font;
