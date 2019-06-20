@@ -32,4 +32,28 @@ void Engine::input(float elapsedTime) {
 	else {
 		m_Bob.stopRight();
 	}
+
+
+	if (Keyboard::isKeyPressed(Keyboard::Up)) {
+		if (m_Bob.getSprite().getPosition().y > m_Window.getPosition().y) {
+			m_Bob.moveUp();
+		}
+		else {
+			m_Bob.stopUp();
+		}
+	}
+
+	else {
+		m_Bob.stopUp();
+	}
+
+	if (Keyboard::isKeyPressed(Keyboard::Down)) {
+		if (m_Bob.getSprite().getPosition().y + m_Bob.getSprite().getGlobalBounds().height < m_Window.getSize().y)
+			m_Bob.moveDown();
+		else
+			m_Bob.stopDown();
+	}
+	else {
+		m_Bob.stopDown();
+	}
 }

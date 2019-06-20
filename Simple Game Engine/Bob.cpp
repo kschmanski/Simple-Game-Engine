@@ -28,6 +28,14 @@ void Bob::moveRight() {
 	m_RightPressed = true;
 }
 
+void Bob::moveUp() {
+	m_UpPressed = true;
+}
+
+void Bob::moveDown() {
+	m_DownPressed = true;
+}
+
 void Bob::stopLeft() {
 	m_LeftPressed = false;
 }
@@ -36,8 +44,12 @@ void Bob::stopRight() {
 	m_RightPressed = false;
 }
 
-float Bob::getSpeed() {
-	return m_Speed;
+void Bob::stopUp() {
+	m_UpPressed = false;
+}
+
+void Bob::stopDown() {
+	m_DownPressed = false;
 }
 
 void Bob::update(float elapsedTime) {
@@ -50,8 +62,15 @@ void Bob::update(float elapsedTime) {
 		m_Position.x -= m_Speed * elapsedTime;
 	}
 
-	m_Sprite.setPosition(m_Position);
+	if (m_UpPressed) {
+		m_Position.y -= m_Speed * elapsedTime;
+	}
 
-	printf("Bob is at position %d\n", m_Position.x);
+	if (m_DownPressed) {
+		m_Position.y += m_Speed * elapsedTime;
+	}
+
+
+	m_Sprite.setPosition(m_Position);
 
 }
